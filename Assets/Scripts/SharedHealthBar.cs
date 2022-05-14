@@ -9,6 +9,8 @@ public class SharedHealthBar : MonoBehaviour
     public Image fillImage;
     private Slider slider;
 
+    private float fillValue;
+
     void Start()
     {
         slider = GetComponent<Slider>();
@@ -16,7 +18,9 @@ public class SharedHealthBar : MonoBehaviour
 
     void Update()
     {
-        
+        fillValue = player.currentHealth / player.maxHealth;
+        slider.value = fillValue;
+        //DisplayPlayerHealth();
     }
 
     public void DisplayPlayerHealth()
@@ -31,7 +35,7 @@ public class SharedHealthBar : MonoBehaviour
             fillImage.enabled = true;
         }
 
-        float fillValue = player.currentHealth / player.maxHealth;
+        fillValue = player.currentHealth / player.maxHealth;
 
         if (fillValue <= slider.maxValue / 3)
         {

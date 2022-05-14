@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - walls
+  - bat
+  - gem
   layers:
   - Default
   - TransparentFX
@@ -12,12 +15,12 @@ TagManager:
   - 
   - Water
   - UI
+  - players
   - 
   - 
   - 
   - 
-  - 
-  - 
+  - enemies
   - 
   - 
   - 
